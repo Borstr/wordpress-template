@@ -3,6 +3,28 @@
   Author: Borys Strzelewicz
 */
 
-.posts__card {
-  width: 300px;
+// Base
+@import './base/reset';
+@import './base/typography';
+
+// Abstracts
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './abstract/functions';
+
+// Pages
+@import './footer.scss';
+@import './front-page.scss';
+@import './header.scss';
+@import './single.scss';
+
+// Components
+@import './components/button.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
 }

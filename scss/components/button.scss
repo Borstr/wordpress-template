@@ -1,0 +1,15 @@
+@import '../abstract/variables';
+
+.btn {
+  background-color: $main-yellow;
+  display: block;
+  text-decoration: none;
+  color: $white;
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: $black-lighter;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}

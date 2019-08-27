@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<section class="container d-flex justify-content-between posts">
+<section class="frontPage">
   <?php 
     $posts = get_posts(array(
       'post_type' => 'post',
@@ -13,13 +13,13 @@
     foreach($posts as $post) : 
     setup_postdata($post);
   ?>
-    <article class="card posts__card">
-      <div class="card-body">
-        <h2 class="card-title"><?php the_title();?></h2>
-        <p class="card-text">
+    <article class="frontPage__room">
+      <div>
+        <h2 class="frontPage__title"><?php the_title();?></h2>
+        <p>
           <?php the_excerpt();?>
         </p>
-        <a href="<?php the_permalink() ?>" class="btn btn-warning">See more</a>
+        <a href="<?php the_permalink() ?>" class="btn">See more</a>
       </div>
     </article>
   <?php endforeach; wp_reset_postdata(); endif;?>

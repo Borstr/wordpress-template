@@ -1,0 +1,12 @@
+@import './abstract/variables';
+
+.frontPage {
+  &__room {
+    width: 300px;
+    background-color: transparent;
+  }
+
+  &__title {
+    color: $main-yellow;
+  }
+}

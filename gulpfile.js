@@ -8,7 +8,7 @@ sass.compiler = require('node-sass');
 function scssDev() {
   return src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat())
+    .pipe(concat('style.css'))
     .pipe(dest('./css'));
 }
 
