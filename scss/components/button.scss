@@ -14,3 +14,20 @@
   text-transform: uppercase;
   margin: 1rem 0;
 }
+
+.btn::after {
+  content: '';
+  display: block;
+  position: relative;
+  border: 2px solid $white;
+  width: 198px;
+  height: 48px;
+  left: 3px;
+  top: -56px;
+  transition: left 300ms ease-out, top 300ms ease-out;
+}
+
+.btn:focus::after, .btn:hover::after {
+  left: 0;
+  top: -50px;
+}
