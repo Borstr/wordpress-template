@@ -1,12 +1,26 @@
 @import './abstract/variables';
 
 .frontPage {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
   &__room {
     width: 300px;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 2rem;
   }
 
   &__title {
     color: $main-yellow;
+  }
+
+  &__description {
+    text-align: center;
   }
 }
