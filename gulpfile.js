@@ -6,14 +6,14 @@ const concat = require('gulp-concat');
 sass.compiler = require('node-sass');
 
 function scssDev() {
-  return src('./scss/**/*.scss')
+  return src('./scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(dest('./css'));
 }
 
 function scssBuild() {
-  return src('./scss/**/*.scss')
+  return src('./scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(concat('style.css'))

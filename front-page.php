@@ -11,13 +11,15 @@
     ));
     if($posts) : foreach($posts as $post) : setup_postdata($post);
   ?>
-    <article class="frontPage__room">
+    <a href="<?php the_permalink($post); ?>" class="frontPage__room">
+      <div class="frontPage__imageContainer">
+        <img class="frontPage__image" src="<?php the_field('image'); ?>" alt="pyramid">
+      </div>
       <h2 class="frontPage__title"><?php the_title();?></h2>
       <p class="frontPage__description">
-        <?php the_excerpt();?>
+        <?php the_field('short_description'); ?>
       </p>
-      <a href="<?php the_permalink() ?>" class="btn">See more</a>
-    </article>
+  </a>
   <?php endforeach; wp_reset_postdata(); endif;?>
 </section>
 

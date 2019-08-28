@@ -1,6 +1,6 @@
 @import '../abstract/variables';
 
-.btn {
+[class*="btn"] {
   background-color: $main-yellow;
   display: block;
   text-decoration: none;
@@ -12,14 +12,12 @@
   color: $black-lighter;
   font-size: 1.25rem;
   text-transform: uppercase;
-  margin: 1rem 0;
 }
 
-.btn::after {
+[class*="btn"]::after {
   content: '';
   display: block;
   position: relative;
-  border: 2px solid $white;
   width: 198px;
   height: 48px;
   left: 3px;
@@ -27,7 +25,15 @@
   transition: left 300ms ease-out, top 300ms ease-out;
 }
 
-.btn:focus::after, .btn:hover::after {
+.btn--white::after {
+  border: 2px solid $white;
+}
+
+.btn--black::after {
+  border: 2px solid $black;
+}
+
+[class*="btn"]:focus::after, [class*="btn"]:hover::after {
   left: 0;
   top: -50px;
 }

@@ -1,0 +1,36 @@
+@import './abstract/variables';
+
+.single {
+  max-width: 500px;
+  margin: 0 auto;
+  
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__title::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 300px 0 0;
+    border-color: $main-yellow transparent transparent transparent;
+    position: absolute;
+    left: calc(50% - 150px);
+    margin-top: 70px;
+  }
+
+  &__content {
+    margin-bottom: 1rem;
+  }
+
+  &__details {
+    margin: .5rem 0;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    color: $main-yellow;
+  }
+}
